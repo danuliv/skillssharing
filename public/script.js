@@ -35,7 +35,6 @@ function reportError(error){
 }
 var  talkDiv = document.querySelector('#talks');
 var shownTalks = Object.create(null);
-let main = document.getElementsByClassName('main')[0];
 
 function displayTalks(talks){
 	talks.forEach(function(talk){
@@ -51,7 +50,7 @@ function displayTalks(talks){
 				talkDiv.replaceChild(node,shown);
 			else
 				talkDiv.appendChild(node);
-			main.scrollTop= +main.scrollHeight - (+main.clientHeight)
+			
 			shownTalks[talk.title]=node;
 		}
 	});
